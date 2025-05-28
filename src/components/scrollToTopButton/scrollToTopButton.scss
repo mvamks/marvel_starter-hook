@@ -1,0 +1,21 @@
+@import '../../style/style.scss';
+
+.button-top {
+    &__img {
+        width: 60px; // Настроим размер картинки
+        height: 60px;
+        border: none;
+        border-radius: 100%; /* Округляем углы */
+        background-color: $main-color;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
+        transition: transform 0.3s ease-in-out; /* Плавный эффект при наведении */
+        cursor: pointer;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        &:hover {
+            transform: scale(1.1); /* Увеличиваем картинку при наведении */
+        }
+    }   
+}
+    
