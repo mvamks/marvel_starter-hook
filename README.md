@@ -1,10 +1,10 @@
-## 🦸 Marvel React App (Hooks + Marvel API)
+# 🦸 Marvel React App (Hooks + Marvel API)
 Интерактивное приложение на React, использующее Marvel API для отображения персонажей и комиксов.
 
-### 🔗 Демо
+## 🔗 Демо
 👉 Открыть приложение
 
-### ⚙️ Стек технологий
+## ⚙️ Стек технологий
 * React (Hooks)
 
 * React Router
@@ -15,14 +15,14 @@
 
 * GitHub Pages (деплой)
 
-### 🚀 Установка и запуск
+## 🚀 Установка и запуск
 ```bash
 git clone https://github.com/mvamks/marvel_starter-hook.git
 cd marvel_starter-hook
 npm install
 npm start
 ```
-### 🌍 Деплой на GitHub Pages
+## 🌍 Деплой на GitHub Pages
 ```bash
 npm run deploy
 ```
