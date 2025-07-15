@@ -26,6 +26,14 @@ const useMyMarvelService = () => {
             console.warn('⚠️ Персонаж не найден');
             return null;
         }
+    // Перебираем каждого персонажа и заменяем thumbnail для id === 1
+        res.data.results.forEach(charData => {
+            if (charData.id === 1) {
+                charData.thumbnail.path = 'https://upload.wikimedia.org/wikipedia/ru/b/bd/Ultimate_Iron_Man';
+                charData.thumbnail.extension = 'jpg';
+            }
+        });
+
         return res.data.results.map(_transformCharacter);   
     }
     
@@ -52,18 +60,24 @@ const useMyMarvelService = () => {
     }
 
     const getCharacter = async (id) => {
+        
         const url = `${_apiBase}characters/${id}?apikey=${_apiKey}`;
        
         const res = await request(url);
         const charData = res?.data?.results?.[0];
 
+        console.log('Данные персонажа:', charData);
         if (!charData) {
-            
             return null; // или выброси ошибку, или верни объект-заглушку
         }
         
+        if (charData.id === 1) {
+            charData.thumbnail.path = 'https://upload.wikimedia.org/wikipedia/ru/b/bd/Ultimate_Iron_Man';
+            charData.thumbnail.extension = 'jpg';
+        }
+
         return _transformCharacter(charData);   
-    }
+    };
 
     const getCharacterByName = async (name) => {
         

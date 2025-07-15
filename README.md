@@ -4,6 +4,7 @@
 ## 🔗 Демо
 👉 Открыть приложение
 
+
 ## ⚙️ Стек технологий
 * React (Hooks)
 
@@ -17,8 +18,6 @@
 
 ## 🚀 Установка и запуск
 ```bash
-Копировать
-Редактировать
 git clone https://github.com/mvamks/marvel_starter-hook.git
 cd marvel_starter-hook
 npm install
@@ -26,8 +25,6 @@ npm start
 ```
 ## 🌍 Деплой на GitHub Pages
 ```bash
-Копировать
-Редактировать
 npm run deploy
 ```
 📌 Скрипты настроены в package.json с помощью пакета gh-pages.
